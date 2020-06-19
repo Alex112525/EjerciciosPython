@@ -19,4 +19,4 @@ class Student:
         return self.__email
 
     def get_pass(self):
-        return self.__pass
+        return self.__password
