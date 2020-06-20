@@ -3,6 +3,11 @@ class Student:
     __email = ""
     __password = ""
 
+    def __init__(self, name, email, password):
+        self.__name = name
+        self.__email = email
+        self.__password = password
+
     def set_name(self, name):
         self.__name = name
 
@@ -20,3 +25,8 @@ class Student:
 
     def get_pass(self):
         return self.__password
+
+    def __str__(self):
+        return f"Nombre: {self.__name}\n" \
+               f"Email: {self.__email}\n" \
+               f"Pasword: {self.__password}"
