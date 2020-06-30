@@ -6,6 +6,9 @@ class Student(Document):
     email = StringField(required=True, max_length=50)
     password = StringField(required=True,max_length=10)
 
+    def getName(self):
+        return self.name
+
     def __str__(self):
         return f"Nombre: {self.name}\n" \
                f"Email: {self.email}\n" \
@@ -47,3 +50,6 @@ def deleteStudent(name):
 
     return Student.objects
 
+
+def getAll():
+    return Student.objects
